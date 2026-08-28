@@ -34,7 +34,7 @@ export function AuthPage({ mode }: AuthPageProps) {
     if (isLogin && account) localStorage.setItem("ems-user", JSON.stringify(account));
     localStorage.setItem("ems-session", email);
     setMessage(isLogin ? "Signed in successfully." : "Account created successfully.");
-    window.setTimeout(() => navigate(account?.role === "technician" ? "/technician-dashboard" : "/"), 350);
+    window.setTimeout(() => navigate(account?.role === "technician" ? "/technician-dashboard" : "/service-portal"), 350);
   }
 
   return (
